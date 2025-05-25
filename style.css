@@ -1,0 +1,145 @@
+/* ......................................................................... */
+.logo {
+    width: 280px;
+    height: 65px;
+    padding: 20px 50px;
+}
+
+/* ......................................................................... */
+
+/* NAVBAR CSS */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 100px;
+}
+
+.nav-ul {
+    padding: 20px;
+    padding-right: 100px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 0px 25px;
+    background-color: white;
+    font-size: 1.1rem;
+}
+
+.nav-item:hover {
+    color: #194a84;
+    cursor: pointer;
+}
+
+/* ......................................................................... */
+
+/* MAIN CSS */
+.main-container {
+   background-color: #f5f7fa;
+}
+
+.main {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 6rem 4rem;
+    margin: 0px 100px;
+}
+
+.main-text {
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4d4d4d;
+}
+
+.main-text h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subheading {
+    line-height: 1.5;
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #717171;
+    margin-bottom: 1.5rem;
+}
+
+.main-text ul {
+    margin-top: 0.5rem;
+    margin-left: -1rem;
+    list-style-type: disc;
+}
+
+.main-text li {
+    padding: 2px;
+    font-size: 1.1rem;
+}
+
+.main-image {
+    flex: 1;
+    min-width: 280px;;
+    display: flex;
+    justify-content: center;
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ......................................................................... */
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.carousel-track img {
+  height: 100px;
+  margin: 0 50px;
+  transition: transform 0.3s;
+}
+
+/* Smooth infinite scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-track img {
+    width: 180px;
+    height: 120px;
+  }
+}
