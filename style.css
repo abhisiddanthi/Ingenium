@@ -1,17 +1,22 @@
-/* ......................................................................... */
+/* .................................................................................................................................................................... */
+
+/* LOGO */
+
 .logo {
     width: 280px;
     height: 65px;
     padding: 20px 50px;
 }
 
-/* ......................................................................... */
+/* .................................................................................................................................................................... */
 
 /* NAVBAR CSS */
+
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: fixed;
+    z-index: 10;
     top: 0;
     width: 100%;
     background-color: white;
@@ -23,7 +28,7 @@
     padding-right: 100px;
     display: flex;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .nav-item {
@@ -40,9 +45,10 @@
     cursor: pointer;
 }
 
-/* ......................................................................... */
+/* .................................................................................................................................................................... */
 
 /* MAIN CSS */
+
 .main-container {
    background-color: #f5f7fa;
 }
@@ -99,47 +105,165 @@
     height: auto;
 }
 
-/* ......................................................................... */
+/* .................................................................................................................................................................... */
+
+/* HEADING */
+
+.heading {
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #717171;
+}
+
+/* .................................................................................................................................................................... */
+
+/* CAROUSEL */
 
 .carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-  background-color: white;
-  padding: 20px 0;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    padding: 20px 0;
+    padding-bottom: 40px;
 }
 
 .carousel {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
 }
 
 .carousel-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 40s linear infinite;
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
 }
 
 .carousel-track img {
-  height: 100px;
-  margin: 0 50px;
-  transition: transform 0.3s;
+    height: 100px;
+    margin: 0 50px;
+    transition: transform 0.3s;
 }
 
 /* Smooth infinite scroll animation */
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .carousel-track img {
-    width: 180px;
-    height: 120px;
-  }
+    .carousel-track img {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+/* .................................................................................................................................................................... */
+
+/* EXCELLENCE */
+
+.excellence {
+    padding: 20px 0px;
+    background-color: #f5f7fa;
+}
+
+.excellence-img {
+    display: flex;
+    justify-content: center;
+}
+
+.excellence img {
+    align-items: center;
+}
+
+/* .................................................................................................................................................................... */
+
+/* BLUE BAND */
+
+.blue-band-container {
+    margin: 50px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.blue-band {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #194a84;
+    border-radius: 15px;
+}
+
+.blue-band-item {
+    padding: 150px;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 0.5px;
+    font-weight: 2  rem;
+}
+
+/* .................................................................................................................................................................... */
+
+/* OUR CAPABILITIES */
+
+.capabilities-out {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f7fa;
+    padding: 50px;
+}
+
+.capabilities-heading {
+    line-height: 6px;
+}
+
+.capabilities-container {
+    width: 70%;
+    padding: 30px;
+    background-color: #001631;
+    border-radius: 20px;
+}
+
+.capabilities {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.capabilities-item {    
+    display: flex;
+    align-items: center;    
+    text-align: center;     
+    flex-direction: column;
+}
+
+.capabilities-item img {
+    width: 100px;
+}
+
+.capabilities-title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    font-style: bold;
+}
+
+.capabilities-text {
+    line-height: 25px;
+    max-width: 340px;
+    font-size: 1rem;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
