@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* .................................................................................................................................................................... */
+
+/* LOGO */
+
+.logo {
+    width: 280px;
+    height: 65px;
+    padding: 20px 50px;
+}
+
+/* .................................................................................................................................................................... */
+
+/* NAVBAR CSS */
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 100px;
+    box-shadow: 1px 1px 10px rgb(136, 135, 135);
+}
+
+.nav-ul {
+    padding: 35px;
+    padding-right: 100px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-family: 'Poppins';
+    border: none;
+    padding: 0px 25px;
+    background-color: white;
+    font-size: 1.1rem;
+}
+
+.nav-item:hover {
+    color: #194a84;
+    cursor: pointer;
+}
+
+/* .................................................................................................................................................................... */
+
+/* BLUE BAND */
+
+.blue-band-container {
+    padding-top: 9rem;
+    margin: 0px 100px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.blue-band {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #194a84;
+    border-radius: 15px;
+}
+
+.blue-band-item {
+    margin: 50px;
+    color: white;
+    text-align: justify;
+    font-family: 'Poppins';
+    line-height: 40px;
+    font-weight: 2rem;
+}
+
+/* .................................................................................................................................................................... */
+
+/* MAIN CSS */
+
+.main {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 6rem 10rem;
+    margin: 0px 100px;
+}
+
+.main-text {
+    flex: 1;
+    font-family: 'Poppins';
+    color: #4d4d4d;
+}
+
+.main-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #194a84;
+}
+
+.main-paragraph {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+.main-text ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    list-style-type: disc;
+}
+
+.main-text li {
+    font-weight: bold;
+    padding: 2px;
+    font-size: 1.2rem;
+}
+
+.main-image {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* .................................................................................................................................................................... */
+
+/* HEADING */
+
+.heading {
+    font-size: 2.5rem;
+    font-family: 'Poppins';
+    text-align: center;
+    color: #717171;
+    line-height: 10px;
+}
+
+.subheading {
+    font-size: 1rem;
+    font-family: 'Poppins';
+    text-align: center;
+    color: #717171;
+}
+
+
+/* .................................................................................................................................................................... */
+
+/* AFFILIATION */
+
+.affiliation {
+    padding: 70px 0px;
+    background-color: #f5f7fa;
+}
+
+.affiliation-img {
+    display: flex;
+    justify-content: center;
+}
+
+.affiliation img {
+    align-items: center;
+}
+
+
+/* .................................................................................................................................................................... */
+
+/* SERVICES */
+
+.services {
+    padding: 70px 0px;
+}
+
+.services-container {
+    padding: 40px 20px;
+}
+
+.services-row {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service {
+    border: solid 1px rgb(228, 228, 228);
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 350px;
+}
+
+.service-title {
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 24px;
+    font-family: 'Poppins';
+    text-align: center;
+    color: #717171;
+    line-height: 10px;
+}
+
+.service-content {
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Poppins';
+    text-align: center;
+    color: #717171;
+    line-height: 25px;
+    max-width: 300px;
+}
+
+
+/* .................................................................................................................................................................... */
+
+/* FOOTER */
+
+.footer {
+    background-color: #232f34;
+    color: white;
+    padding: 20px 40px;
+    font-family: 'Poppins';
+}
+
+.logo-footer {
+    height: 40px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #888;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.social-icons button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+}

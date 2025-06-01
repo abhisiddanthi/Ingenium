@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /* .................................................................................................................................................................... */
 
 /* LOGO */
@@ -24,7 +29,7 @@
 }
 
 .nav-ul {
-    padding: 20px;
+    padding: 35px;
     padding-right: 100px;
     display: flex;
     list-style-type: none;
@@ -33,7 +38,7 @@
 
 .nav-item {
     font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
     border: none;
     padding: 0px 25px;
     background-color: white;
@@ -50,13 +55,13 @@
 /* MAIN CSS */
 
 .main-container {
-   background-color: #f5f7fa;
+    background-color: #f5f7fa;
 }
 
 .main {
     max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
     padding: 6rem 4rem;
     margin: 0px 100px;
@@ -64,7 +69,7 @@
 
 .main-text {
     flex: 1;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
     color: #4d4d4d;
 }
 
@@ -84,7 +89,7 @@
 
 .main-text ul {
     margin-top: 0.5rem;
-    margin-left: -1rem;
+    margin-left: 1rem;
     list-style-type: disc;
 }
 
@@ -95,7 +100,7 @@
 
 .main-image {
     flex: 1;
-    min-width: 280px;;
+    min-width: 280px;
     display: flex;
     justify-content: center;
 }
@@ -111,7 +116,7 @@
 
 .heading {
     font-size: 2.5rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
     text-align: center;
     color: #717171;
 }
@@ -119,6 +124,10 @@
 /* .................................................................................................................................................................... */
 
 /* CAROUSEL */
+
+.clientele {
+    padding: 30px;
+}
 
 .carousel-wrapper {
     overflow: hidden;
@@ -152,6 +161,7 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }
@@ -170,7 +180,7 @@
 /* EXCELLENCE */
 
 .excellence {
-    padding: 20px 0px;
+    padding: 30px 0px;
     background-color: #f5f7fa;
 }
 
@@ -206,12 +216,11 @@
 }
 
 .blue-band-item {
-    padding: 150px;
     color: white;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 0.5px;
-    font-weight: 2  rem;
+    font-family: 'Poppins';
+    line-height: 40px;
+    font-weight: 2rem;
 }
 
 /* .................................................................................................................................................................... */
@@ -226,7 +235,7 @@
 }
 
 .capabilities-heading {
-    line-height: 6px;
+    line-height: 40px;
 }
 
 .capabilities-container {
@@ -242,10 +251,10 @@
     justify-content: space-around;
 }
 
-.capabilities-item {    
+.capabilities-item {
     display: flex;
-    align-items: center;    
-    text-align: center;     
+    align-items: center;
+    text-align: center;
     flex-direction: column;
 }
 
@@ -255,15 +264,82 @@
 
 .capabilities-title {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.7rem;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
     font-style: bold;
 }
 
 .capabilities-text {
-    line-height: 25px;
+    line-height: 30px;
     max-width: 340px;
     font-size: 1rem;
+    font-weight: 300px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
+}
+
+
+/* .................................................................................................................................................................... */
+
+/* FOOTER */
+
+.footer {
+    background-color: #232f34;
+    color: white;
+    padding: 20px 40px;
+    font-family: 'Poppins';
+}
+
+.logo-footer {
+    height: 40px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #888;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.social-icons button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
 }
