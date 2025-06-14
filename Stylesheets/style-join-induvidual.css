@@ -26,6 +26,7 @@
     width: 100%;
     background-color: white;
     height: 100px;
+    box-shadow: 1px 1px 10px rgb(136, 135, 135);
 }
 
 .nav-ul {
@@ -86,7 +87,73 @@
 
 .dropdown a:hover {
     background-color: #e0e0e0;
+}   
+
+/* .................................................................................................................................................................... */
+
+/* FORM */
+
+.form-container {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-items: center;
 }
+
+h2 {
+    font-family: 'Poppins';
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Poppins';
+    color: #666;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #999999;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #a4a5a4;
+}
+
+
 
 /* .................................................................................................................................................................... */
 
@@ -97,7 +164,7 @@
     font-family: 'Poppins';
     text-align: center;
     color: #717171;
-    line-height: 30px;
+    line-height: 10px;
 }
 
 .subheading {
@@ -105,77 +172,6 @@
     font-family: 'Poppins';
     text-align: center;
     color: #717171;
-}
-
-/* .................................................................................................................................................................... */
-
-/* PROJECTS */
-
-.projects {
-    padding-top: 10rem;
-    padding-bottom: 5rem;
-    background-color: #F5F7FA;
-}
-
-/* .................................................................................................................................................................... */
-
-/* GROWTH */
-
-.growth {
-    padding-top: 100px;
-}
-
-/* .................................................................................................................................................................... */
-
-/* CARD */
-
-.cards {
-    padding: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.card-container {
-    margin: 25px 0;
-    background-color: #ffffff;
-    box-shadow: 5px 5px 10px #b4cae6;
-    border-radius: 0.75rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.5rem;
-    max-width: 64rem;
-}
-
-.icon-wrapper {
-    border: 1px solid #194A84;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-image {
-    width: 3rem;
-    height: 3rem;
-    object-fit: contain;
-}
-
-.card-title {
-    font-family: 'Poppins';
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1F2937;
-    margin: 0 0 0.25rem 0;
-}
-
-.card-text {
-    font-family: 'Poppins';
-    margin: 0;
-    line-height: 1.5;
-    color: #4B5563;
 }
 
 

@@ -1,3 +1,21 @@
+const joinUs = document.getElementById('join-us');
+const dropdown = document.getElementById('dropdown-menu');
+const arrow = document.getElementById('arrow');
+
+joinUs.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.toggle('show');
+    arrow.innerHTML = isOpen ? '&#x25B2;' : '&#x25BC;';
+});
+
+document.addEventListener('click', (e) => {
+    if (!joinUs.contains(e.target)) {
+        dropdown.classList.remove('show');
+        arrow.innerHTML = '&#x25BC;';
+    }
+});
+
+
 // Your image sources
 const images = [
     'Images/Clientele/clientele1.png',
