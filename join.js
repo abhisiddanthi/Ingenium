@@ -36,7 +36,7 @@ document.getElementById("collabForm").addEventListener("submit", async function 
     const emailFormData = new FormData();
     emailFormData.append("subject", "New Campus Collaboration Submission");
     emailFormData.append("body", emailContent);
-    emailFormData.append("to", "collaborations@ingenium.com"); // Change to your recipient email
+    emailFormData.append("to", "communications@ingeniumconsultancy.com"); // Change to your recipient email
 
     // Attach file if provided
     const fileInput = formData.get("proposalUpload");
