@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Detection Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .test-info {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .device-info {
+            background-color: #f0fff0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .redirect-info {
+            background-color: #fff8f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mobile Detection Test</h1>
+
+    <div class="test-info">
+        <h2>How Mobile Detection Works</h2>
+        <p>This page demonstrates the mobile detection system implemented for the Ingenium website.</p>
+
+        <div class="device-info">
+            <h3>Device Detection Criteria:</h3>
+            <ul>
+                <li><strong>User Agent Check:</strong> Detects mobile browsers (Android, iOS, etc.)</li>
+                <li><strong>Screen Width:</strong> Considers devices with width ≤ 768px as mobile</li>
+                <li><strong>Touch Capability:</strong> Checks for touch support</li>
+            </ul>
+        </div>
+
+        <div class="redirect-info">
+            <h3>Redirect Behavior:</h3>
+            <ul>
+                <li><strong>Mobile Device:</strong> Desktop pages redirect to mobile versions</li>
+                <li><strong>Desktop Device:</strong> Mobile pages redirect to desktop versions</li>
+                <li><strong>File Mapping:</strong> Each page has a corresponding mobile/desktop version</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test-info">
+        <h2>File Mapping</h2>
+        <p>The system maps between desktop and mobile versions:</p>
+        <ul>
+            <li><code>index.html</code> ↔ <code>index-mobile.html</code></li>
+            <li><code>about.html</code> ↔ <code>about-mobile.html</code></li>
+            <li><code>team.html</code> ↔ <code>team-mobile.html</code></li>
+            <li><code>projects.html</code> ↔ <code>projects-mobile.html</code></li>
+            <li><code>join-induvidual.html</code> ↔ <code>join-individual-mobile.html</code></li>
+            <li><code>join-club.html</code> ↔ <code>join-club-mobile.html</code></li>
+            <li><code>join-company.html</code> ↔ <code>join-company-mobile.html</code></li>
+        </ul>
+    </div>
+
+    <div class="test-info">
+        <h2>Testing Instructions</h2>
+        <ol>
+            <li><strong>Desktop Testing:</strong> Open any mobile HTML file on desktop - it should redirect to desktop
+                version</li>
+            <li><strong>Mobile Testing:</strong> Open any desktop HTML file on mobile - it should redirect to mobile
+                version</li>
+            <li><strong>Browser DevTools:</strong> Use device simulation to test different screen sizes</li>
+            <li><strong>Real Devices:</strong> Test on actual mobile devices for best results</li>
+        </ol>
+    </div>
+
+    <div class="test-info">
+        <h2>Implementation Files</h2>
+        <ul>
+            <li><code>mobile-detection.js</code> - Detects mobile devices and redirects desktop pages</li>
+            <li><code>desktop-detection.js</code> - Detects desktop devices and redirects mobile pages</li>
+            <li>Both scripts are included in all HTML files</li>
+        </ul>
+    </div>
+
+    <script src="mobile-detection.js"></script>
+    <script src="desktop-detection.js"></script>
+</body>
+
+</html>

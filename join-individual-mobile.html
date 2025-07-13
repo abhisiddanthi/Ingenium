@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join as Individual | Ingenium Consultancy</title>
+    <link rel="stylesheet" href="styles-mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="header">
+            <img src="Images/logo.png" alt="Ingenium Consultancy Logo" class="logo">
+            <div class="menu-icon" id="menuOpenBtn" tabindex="0" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </div>
+        </header>
+        <!-- Sidebar Menu -->
+        <nav class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+            <div class="sidebar-header">
+                <img src="Images/logo.png" alt="Ingenium Consultancy Logo" class="logo">
+                <button class="close-btn" id="menuCloseBtn" aria-label="Close menu">&times;</button>
+            </div>
+            <ul class="sidebar-links">
+                <li><a href="index-mobile.html">Home</a></li>
+                <li><a href="about-mobile.html">About Us</a></li>
+                <li><a href="team-mobile.html">Meet Our Team</a></li>
+                <li><a href="projects-mobile.html">Past Projects</a></li>
+                <li class="join-us-parent">
+                    <span id="joinUsToggle">Join Us <span class="chevron" id="joinUsChevron">&#x25B2;</span></span>
+                    <ul class="join-us-dropdown" id="joinUsDropdown">
+                        <li><a href="join-company-mobile.html">Company Client</a></li>
+                        <li><a href="join-club-mobile.html">College Club</a></li>
+                        <li><a href="join-individual-mobile.html">Individuals</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+        <main style="padding: 24px 0;">
+            <div class="form-card">
+                <h2>Join as Individual</h2>
+                <div class="subtitle">Whether you're looking to co-create impact or seeking smart project execution —
+                    we'd love to hear from you</div>
+                <div class="description">Fill in your details below and our team will get in touch with you soon.</div>
+                <form class="form-container">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Message" rows="4" class="full-width" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="desktop-detection.js"></script>
+    <script>
+        // Hamburger open/close
+        const menuOpenBtn = document.getElementById('menuOpenBtn');
+        const menuCloseBtn = document.getElementById('menuCloseBtn');
+        const mobileSidebar = document.getElementById('mobileSidebar');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+        const joinUsToggle = document.getElementById('joinUsToggle');
+        const joinUsDropdown = document.getElementById('joinUsDropdown');
+        const joinUsChevron = document.getElementById('joinUsChevron');
+
+        function openSidebar() {
+            mobileSidebar.classList.add('open');
+            sidebarBackdrop.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeSidebar() {
+            mobileSidebar.classList.remove('open');
+            sidebarBackdrop.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        if (menuOpenBtn && menuCloseBtn && mobileSidebar && sidebarBackdrop) {
+            menuOpenBtn.addEventListener('click', openSidebar);
+            menuCloseBtn.addEventListener('click', closeSidebar);
+            sidebarBackdrop.addEventListener('click', closeSidebar);
+        }
+        // Join Us dropdown
+        let joinOpen = false;
+        if (joinUsToggle && joinUsDropdown && joinUsChevron) {
+            joinUsToggle.addEventListener('click', () => {
+                joinOpen = !joinOpen;
+                joinUsDropdown.style.display = joinOpen ? 'block' : 'none';
+                joinUsChevron.innerHTML = joinOpen ? '&#x25B2;' : '&#x25BC;';
+            });
+            joinUsDropdown.style.display = 'none';
+            joinUsChevron.innerHTML = '&#x25BC;';
+        }
+    </script>
+</body>
+
+</html>
