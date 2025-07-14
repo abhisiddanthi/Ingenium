@@ -56,7 +56,8 @@
 }
 
 .dropdown {
-    position: relative;;
+    position: relative;
+    ;
     left: 0;
     background-color: #f7f9fc;
     border: 1px solid #d3d3d3;
@@ -266,6 +267,11 @@
     max-width: 300px;
 }
 
+@media (min-width: 900px) {
+    .service-title {
+        line-height: 1.5;
+    }
+}
 
 /* .................................................................................................................................................................... */
 

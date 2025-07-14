@@ -1,4 +1,5 @@
-/* Hide everything on desktop */
+/* --- Cleaned mobile stylesheet: all desktop-hiding rules removed --- */
+
 body,
 html {
     margin: 0;
@@ -14,17 +15,6 @@ html {
     box-sizing: border-box;
     padding-bottom: 32px;
     padding-top: 58px;
-    /* add space for fixed header */
-}
-
-@media (min-width: 601px) {
-    body>* {
-        display: none !important;
-    }
-
-    body {
-        background: #fff;
-    }
 }
 
 .header {
@@ -37,7 +27,6 @@ html {
     top: 0;
     left: 0;
     width: 100%;
-    /* Remove max-width from header */
     z-index: 100;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     height: 58px;
@@ -533,6 +522,7 @@ img {
     pointer-events: auto;
 }
 
+/*
 @media (min-width: 601px) {
 
     .mobile-sidebar,
@@ -540,6 +530,7 @@ img {
         display: none !important;
     }
 }
+*/
 
 .clientele-section,
 .proven-section,
@@ -763,17 +754,6 @@ html {
     margin: 10px 0 0 0;
     text-align: center;
     padding: 0 18px;
-}
-
-@media (min-width: 601px) {
-
-    .mobile-container,
-    .about-ribbon,
-    .about-section,
-    .about-affiliations,
-    .about-services {
-        display: none !important;
-    }
 }
 
 .team-section {
@@ -1044,18 +1024,21 @@ html {
     margin-left: 0;
 }
 
+/* Remove all display: none !important; rules that hide content on desktop */
+
+/*
 @media (min-width: 601px) {
     body>* {
-        display: none !important;
-    }
-
-    body,
-    html {
-        background: #fff;
-    }
+        /* display: none !important; */
 }
 
-@media (max-width: 600px) {
+body,
+html {
+    background: #fff;
+}
+}
+
+*/ @media (max-width: 600px) {
     .form-card {
         background: #fff;
         border-radius: 14px;
@@ -1154,4 +1137,86 @@ html {
         display: block;
         font-family: 'Poppins', Arial, sans-serif;
     }
+}
+
+/* --- Mobile Footer Styles --- */
+.footer {
+    background-color: #232f34;
+    color: white;
+    padding: 20px 10px;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.logo-footer {
+    height: 36px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.footer-nav {
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer-nav a {
+    color: white;
+    display: inline-block;
+    margin: 0 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    padding: 0 2px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #888;
+    margin: 16px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons button {
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
 }

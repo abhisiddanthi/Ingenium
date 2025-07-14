@@ -6,34 +6,12 @@
     let redirectAttempted = false;
 
     function isMobileDevice() {
-        // Check for mobile user agent
-        const mobileUserAgents = [
-            /Android/i,
-            /webOS/i,
-            /iPhone/i,
-            /iPad/i,
-            /iPod/i,
-            /BlackBerry/i,
-            /Windows Phone/i,
-            /Mobile/i,
-            /Tablet/i
-        ];
-
-        // Check if user agent matches any mobile pattern
-        const isMobileUA = mobileUserAgents.some(agent => agent.test(navigator.userAgent));
-
-        // Check screen width (additional check for responsive design)
-        const isMobileScreen = window.innerWidth <= 768;
-
-        // Check for touch capability (mobile devices typically have touch)
-        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-        // Return true if any mobile indicators are present
-        return isMobileUA || (isMobileScreen && isTouchDevice);
+        // Use orientation: if width < height, treat as mobile
+        return window.innerWidth < window.innerHeight;
     }
 
     function isDesktopDevice() {
-        return !isMobileDevice();
+        return window.innerWidth >= window.innerHeight;
     }
 
     function getCurrentFileName() {
