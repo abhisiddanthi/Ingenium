@@ -4,76 +4,65 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Join as College Club | Ingenium Consultancy</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles-mobile.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" /> <!--fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<title>Ingenium</title>
 
 <body>
-
-    <!-- ------------------------------------------------------------------------------- -->
-
-    <!-- NAVBAR -->
-
-    <header class="navbar">
-        <img src="./Images/logo.png" class="logo" />
-        <nav>
-            <ul class="nav-ul">
-                <li><a href="./index-mobile.html"><button class="nav-item">Home</button></a></li>
-                <li><a href="./about-mobile.html"><button class="nav-item">About Us</button></a></li>
-                <li><a href="./team-mobile.html"><button class="nav-item">Meet Our Team</button></a></li>
-                <li><a href="./projects-mobile.html"><button class="nav-item">Past Projects</button></a></li>
-                <li id="join-us">
-                    <span class="nav-item" style="color: #194a84; font-weight: bold">Join Us <span
-                            id="arrow">&#x25BC;</span></span>
-                    <div class="dropdown" id="dropdown-menu">
-                        <a href="./join-company-mobile.html" style="font-family: 'Poppins';">Company Client</a>
-                        <a href="./join-club-mobile.html" style="font-family: 'Poppins';">College Club</a>
-                        <a href="./join-individual-mobile.html" style="font-family: 'Poppins';">Individuals</a>
-                    </div>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="header">
+            <img src="Images/logo.png" alt="Ingenium Consultancy Logo" class="logo">
+            <div class="menu-icon" id="menuOpenBtn" tabindex="0" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </div>
+        </header>
+        <!-- Sidebar Menu -->
+        <nav class="mobile-sidebar" id="mobileSidebar" aria-hidden="true">
+            <div class="sidebar-header">
+                <img src="Images/logo.png" alt="Ingenium Consultancy Logo" class="logo">
+                <button class="close-btn" id="menuCloseBtn" aria-label="Close menu">&times;</button>
+            </div>
+            <ul class="sidebar-links">
+                <li><a href="index-mobile.html">Home</a></li>
+                <li><a href="about-mobile.html">About Us</a></li>
+                <li><a href="team-mobile.html">Meet Our Team</a></li>
+                <li><a href="projects-mobile.html">Past Projects</a></li>
+                <li class="join-us-parent">
+                    <span id="joinUsToggle">Join Us <span class="chevron" id="joinUsChevron">&#x25BC;</span></span>
+                    <ul class="join-us-dropdown" id="joinUsDropdown">
+                        <li><a href="join-company-mobile.html">Company Client</a></li>
+                        <li><a href="join-club-mobile.html">College Club</a></li>
+                        <li><a href="join-individual-mobile.html">Individuals</a></li>
+                    </ul>
                 </li>
             </ul>
         </nav>
-    </header>
-
-    <!-- ------------------------------------------------------------------------------- -->
-
-    <div style="padding: 10% 0">
-        <div class="form-container">
-            <h2>Campus Collaborations</h2>
-            <p>We have actively collaborated with college societies and cells, student bodies to ...<br>(include list of
-                all
-                collaborations)</p>
-            <p>If you are interested in partnering with Ingenium Consultancy, please fill in your details here:</p>
-
-            <form id="collabForm">
-                <div class="form-row">
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+        <main style="padding: 24px 0;">
+            <div class="form-card">
+                <h2>Campus Collaborations</h2>
+                <p>We have actively collaborated with college societies and cells, student bodies to ...<br>(include
+                    list of
+                    all collaborations)</p>
+                <p>If you are interested in partnering with Ingenium Consultancy, please fill in your details here:</p>
+                <form id="collabForm" class="form-container">
                     <input type="text" name="college" placeholder="College/Institution Name" required>
                     <input type="text" name="club" placeholder="Club Name" required>
-                </div>
-                <div class="form-row">
                     <input type="text" name="contactName" placeholder="Contact Person Name" required>
                     <input type="email" name="contactEmail" placeholder="Contact Person Email" required>
-                </div>
-                <div class="form-row">
                     <input type="tel" name="contactPhone" placeholder="Contact Person Phone" required>
                     <input type="text" name="collabType" placeholder="Type of Collaboration" required>
-                </div>
-                <div class="form-row">
                     <input type="text" name="pastEvents" placeholder="Past Events/Experience">
                     <input type="file" name="proposalUpload" accept=".pdf,.doc,.docx" required>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
     </div>
-
-    <!-- ------------------------------------------------------------------------------- -->
-
-    <!-- FOOTER -->
     <div class="footer-wrapper">
         <div class="footer">
             <div class="footer-top">
@@ -96,10 +85,44 @@
             </div>
         </div>
     </div>
-
-
     <script src="device-detection.js"></script>
-    <script src="join.js"></script>
+    <script>
+        // Hamburger open/close
+        const menuOpenBtn = document.getElementById('menuOpenBtn');
+        const menuCloseBtn = document.getElementById('menuCloseBtn');
+        const mobileSidebar = document.getElementById('mobileSidebar');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+        const joinUsToggle = document.getElementById('joinUsToggle');
+        const joinUsDropdown = document.getElementById('joinUsDropdown');
+        const joinUsChevron = document.getElementById('joinUsChevron');
+
+        function openSidebar() {
+            mobileSidebar.classList.add('open');
+            sidebarBackdrop.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeSidebar() {
+            mobileSidebar.classList.remove('open');
+            sidebarBackdrop.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        if (menuOpenBtn && menuCloseBtn && mobileSidebar && sidebarBackdrop) {
+            menuOpenBtn.addEventListener('click', openSidebar);
+            menuCloseBtn.addEventListener('click', closeSidebar);
+            sidebarBackdrop.addEventListener('click', closeSidebar);
+        }
+        // Join Us dropdown
+        let joinOpen = false;
+        if (joinUsToggle && joinUsDropdown && joinUsChevron) {
+            joinUsToggle.addEventListener('click', () => {
+                joinOpen = !joinOpen;
+                joinUsDropdown.style.display = joinOpen ? 'block' : 'none';
+                joinUsChevron.innerHTML = joinOpen ? '&#x25B2;' : '&#x25BC;';
+            });
+            joinUsDropdown.style.display = 'none';
+            joinUsChevron.innerHTML = '&#x25BC;';
+        }
+    </script>
 </body>
 
 </html>
